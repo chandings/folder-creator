@@ -18,6 +18,6 @@ The above command will create the template and save it within the tool with the 
 
 `fct -ct -n main -st myfolderstructure` 
 
-The above command will replace 'main' with '<name>' and 'Main' with '<Name>' while creating the template.
+The above command will replace 'main' with '&lt;name&gt;' and 'Main' with '&lt;Name&gt;' while creating the template.
 
 
