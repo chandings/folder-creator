@@ -6,8 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chandings/folder-creator.git"
+  },
+  "keywords": ["folder creator","folder templating tool"],
   "author": "Chandra Badan Singh",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chandings/folder-creator/issues"
+  },
+  "homepage": "https://github.com/chandings/folder-creator#readme",
   "dependencies": {
     "commander": "^9.4.0"
   },

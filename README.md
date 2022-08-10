@@ -4,6 +4,12 @@ Folder creator is  a command line tool that allows you to generate folders and f
 
 ## Example: Creating a template
 
+`npm install -g folder-creator`
+
+Ensure that `-g` option is used otherwise the tool will not be available outside the installed folder.
+
+## Example: Creating a template
+
 `fct -ct myfolderstructure.json`
 
 The above command will create a json containing the current folder structure along with all the files and its contents. 
