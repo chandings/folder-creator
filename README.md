@@ -51,11 +51,11 @@ The above command will create the folder structure from the saved template 'myfo
 ## Full options list
 |Options|Description|
 | ----------- | ----------- |
-|-t, --templatePath <template-path> |Provide the location to json file containing the template to generate.
+|-t, --templatePath &lt;template-path&gt; |Provide the location to json file containing the template to generate.
 |-ct, --createTemplate              |Will iterate through the directory and create a template. If used with --saveTemplate option it will save the created template. Otherwise, will use the argument to save thee file.
-|-st, --saveTemplate <template-name>|Saves (overwrites if exists) the template with the given name. Must be used with --templatePath option. Folder template is not created.
-|-tn, --templateName <template-name>|Create the folder template using the template saved with the given name.
-|-n, --name <name>                  |When used with -ct / --createTemplate this would replace the provided text with <name> before the template is saved. Otherwise this would replace all <name> in the template with the provided option. If not provided it will be replaced with the argument.
+|-st, --saveTemplate &lt;template-name&gt;|Saves (overwrites if exists) the template with the given name. Must be used with --templatePath option. Folder template is not created.
+|-tn, --templateName &lt;template-name&gt;|Create the folder template using the template saved with the given name.
+|-n, --name &lt;name&gt;                  |When used with -ct / --createTemplate this would replace the provided text with &lt;name&gt; before the template is saved. Otherwise this would replace all &lt;name&gt; in the template with the provided option. If not provided it will be replaced with the argument.
 |-v, --verbose                      |Show detailed messages.
-|-md, --makeDefault <make-default>  |will make the provided template name as default. This will override the previous default.
+|-md, --makeDefault &lt;make-default&gt;  |will make the provided template name as default. This will override the previous default.
 |-h, --help                         |display help for command
