@@ -1,0 +1,1 @@
+{"<Name>.css":".<name>{\r\n    font-size: 30px;\r\n}","<Name>.js":"import React from 'react'\r\nimport \"./<Name>.css\"\r\n\r\nexport default function <Name>() {\r\n  return (\r\n    <div className='<name>'><Name></div>\r\n  )\r\n}\r\n"}
