@@ -65,3 +65,12 @@ The above command will create the folder structure from the saved template 'myfo
 |-v, --verbose                      |Show detailed messages.
 |-md, --makeDefault &lt;make-default&gt;  |will make the provided template name as default. This will override the previous default.
 |-h, --help                         |display help for command
+
+## Templates already included
+
+|Name|Description|
+| ----------- | ----------- |
+|vanilajs|Creates a folder structure for a basic browser js project, name is parameterized.|
+|nodejs|Creates a folder structure for a basic nodejs project, name is parameterized.|
+|reactjs|Creates a folder structure for a reactjs project, name is parameterized.|
+|rcc|Creates reactjs functional component with a linked css file|
