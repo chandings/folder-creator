@@ -2,7 +2,7 @@
 
 Folder creator is  a command line tool that allows you to generate folders and files from a saved template. Templates can be a JSON file. The tool also allows you to templatize the names and contents of the files and folders. 
 
-## Example: Creating a template
+## Installation
 
 `npm install -g folder-creator`
 
