@@ -20,4 +20,22 @@ The above command will create the template and save it within the tool with the 
 
 The above command will replace 'main' with '&lt;name&gt;' and 'Main' with '&lt;Name&gt;' while creating the template.
 
+## Example: creating folders from a template file
+
+`fct -t c:/mytemplates/myfolderstructure.json` 
+
+The above command will create the folder structure stored in the file 'c:/mytemplates/myfolderstructure.json'. The folders will be created in the current folder.
+
+## Example: creating folders from saved template
+
+`fct -tn myfolderstructure` 
+
+The above command will create the folder structure from the saved template 'myfolderstructure'. The folders will be created in the current folder.
+
+## Example: creating folders from saved template
+
+`fct -tn myfolderstructure` 
+
+The above command will create the folder structure from the saved template 'myfolderstructure'. The folders will be created in the current folder.
+
 
