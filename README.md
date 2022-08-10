@@ -49,19 +49,13 @@ The above command will create the folder structure from the saved template 'myfo
    `folder-creator [options] [argument]`
 
 ## Full options list
-
-  -t, --templatePath <template-path>   Provide the location to json file containing the template to generate.
-  -ct, --createTemplate                Will iterate through the directory and create a template. If used with
-                                       --saveTemplate option it will save the created template. Otherwise, will use the
-                                       argument to save thee file.
-  -st, --saveTemplate <template-name>  Saves (overwrites if exists) the template with the given name. Must be used with
-                                       --templatePath option. Folder template is not created.
-  -tn, --templateName <template-name>  Create the folder template using the template saved with the given name.
-  -n, --name <name>                    When used with -ct / --createTemplate this would replace the provided text with
-                                       <name> before the template is saved. Otherwise this would replace all <name> in
-                                       the template with the provided option. If not provided it will be replaced with
-                                       the argument.
-  -v, --verbose                        Show detailed messages.
-  -md, --makeDefault <make-default>    will make the provided template name as default. This will override the previous
-                                       default.
-  -h, --help                           display help for command
+|Options|Description|
+| ----------- | ----------- |
+|-t, --templatePath <template-path> |Provide the location to json file containing the template to generate.
+|-ct, --createTemplate              |Will iterate through the directory and create a template. If used with --saveTemplate option it will save the created template. Otherwise, will use the argument to save thee file.
+|-st, --saveTemplate <template-name>|Saves (overwrites if exists) the template with the given name. Must be used with --templatePath option. Folder template is not created.
+|-tn, --templateName <template-name>|Create the folder template using the template saved with the given name.
+|-n, --name <name>                  |When used with -ct / --createTemplate this would replace the provided text with <name> before the template is saved. Otherwise this would replace all <name> in the template with the provided option. If not provided it will be replaced with the argument.
+|-v, --verbose                      |Show detailed messages.
+|-md, --makeDefault <make-default>  |will make the provided template name as default. This will override the previous default.
+|-h, --help                         |display help for command
