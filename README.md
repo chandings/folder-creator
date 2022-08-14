@@ -62,6 +62,7 @@ The above command will create the folder structure from the saved template 'myfo
 |-st, --saveTemplate &lt;template-name&gt;|Saves (overwrites if exists) the template with the given name. Must be used with --templatePath option. Folder template is not created.
 |-tn, --templateName &lt;template-name&gt;|Create the folder template using the template saved with the given name.
 |-n, --name &lt;name&gt;                  |When used with -ct / --createTemplate this would replace the provided text with &lt;name&gt; before the template is saved. Otherwise this would replace all &lt;name&gt; in the template with the provided option. If not provided it will be replaced with the argument.
+|-d, --default|Create using default template. If no default is set this will create an empty folder if an argument is provided.
 |-v, --verbose                      |Show detailed messages.
 |-md, --makeDefault &lt;make-default&gt;  |will make the provided template name as default. This will override the previous default.
 |-h, --help                         |display help for command
@@ -73,4 +74,5 @@ The above command will create the folder structure from the saved template 'myfo
 |vanilajs|Creates a folder structure for a basic browser js project, name is parameterized.|
 |nodejs|Creates a folder structure for a basic nodejs project, name is parameterized.|
 |reactjs|Creates a folder structure for a reactjs project, name is parameterized.|
-|rcc|Creates reactjs functional component with a linked css file|
+|rcc|Creates reactjs class component with a linked css file|
+|rfc|Creates reactjs functional component with a linked css file|

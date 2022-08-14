@@ -1,6 +1,6 @@
 {
   "name": "folder-creator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This tool will help user create a set of folders described as a JSON",
   "main": "index.js",
   "scripts": {

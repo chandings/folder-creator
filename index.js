@@ -11,6 +11,7 @@ program
 .option('-tn, --templateName <template-name>', 'Create the folder template using the template saved with the given name.')
 .option('-n, --name <name>','When used with -ct / --createTemplate this would replace the provided text with <name> before the template is saved. Otherwise this would replace all <name> in the template with the provided option. If not provided it will be replaced with the argument.')
 // .option('-p, --path <path>', 'The path where the folder template will be created. If not provided the template will be created in the current working directory')
+.option('-d, --default', 'Create using default template. If no default is set this will create an empty folder if an argument is provided.')
 .option('-v, --verbose', 'Show detailed messages.')
 .option('-md, --makeDefault <make-default>', 'will make the provided template name as default. This will override the previous default.')
 .usage("folder-creator [options] [argument]");
@@ -66,11 +67,13 @@ const log = (msg, isError, force)=>{
         console.error("Error:An error occurred, please run using -v or --verbose option to get more details.")
     }
 }
-
+let fileCounter  = 0;
+let folderCounter = 0;
 const mkTemplates = (obj, path)=>{
     if(path.trim() === ""){
         path = "."
     }else{
+        folderCounter++
         mkdir(path);
     }
     let fileName;
@@ -93,6 +96,7 @@ const mkTemplates = (obj, path)=>{
                     return Name;
                 return word;
             });
+            fileCounter++;
             mkfile(path+"/"+fileName, content);
         }
     }
@@ -185,16 +189,23 @@ const saveTemplate = (templateName, template)=>{
 const getSavedTemplateList = (templateName)=>{
     const templateList = require.main.path+"/templateList.json";
     if(!fs.existsSync(templateList)){
-        log(`Template with the name ${templateName} does not exist!`, false, true)
-        return null;
+        if(templateName === 'default'){
+            return {};
+        }else{
+            
+            return null;
+        }
     }
 
     const templateListObj = JSON.parse(loadFile(templateList));
     if(!templateListObj[templateName]){
-        log(`Template with the name ${templateName} does not exist!`, false, true);
-        return null;
+        if(templateName === 'default'){
+            return {};
+        }else{
+            log(`Template with the name ${templateName} does not exist!`, true, true);
+            return null;
+        }
     }
-    console.log(require.main.path + templateListObj[templateName]);
     return JSON.parse(loadFile(require.main.path + templateListObj[templateName]));
 }
 
@@ -233,6 +244,9 @@ if(program.opts().makeDefault !== undefined){
     template = getSavedTemplateList(program.opts().templateName)
     if(template !== null){
         mkTemplates(template, folderName);
+        log(`${fileCounter} files & ${folderCounter} folders were successfully created.`, false, true);
+    }else{
+        log(`Template with the name ${program.opts().templateName} does not exist!`, true, true);
     }
 }else if(program.opts().templatePath !== undefined){
     try{
@@ -242,10 +256,12 @@ if(program.opts().makeDefault !== undefined){
         log(err.message, true);
     }
     mkTemplates(template, folderName);
-}else{
-    template = getSavedTemplateList("default")
-    if(template === null){
-        template = {};
-    }
+    log(`${fileCounter} files & ${folderCounter} folders were successfully created.`, false, true);
+}else if(program.opts().default !== undefined){
+    template = getSavedTemplateList("default");
+    template = (!template)?{}:template;
     mkTemplates(template, folderName);
+    log(`${fileCounter} files & ${folderCounter} folders were successfully created.`, false, true);
+}else{
+    log("Please provide options.", true, true)
 }
